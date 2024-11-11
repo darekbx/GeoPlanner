@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E5C1C4AC2CDE313400EFF5A3 /* WindTurbine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1C4AB2CDE313400EFF5A3 /* WindTurbine.swift */; };
 		E5C1C4AE2CDE32B300EFF5A3 /* WindTurbinesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1C4AD2CDE32B300EFF5A3 /* WindTurbinesProvider.swift */; };
+		E5C1C4B02CE247EC00EFF5A3 /* GpxCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1C4AF2CE247EC00EFF5A3 /* GpxCreator.swift */; };
 		E5CA56292CD10D7C0010E035 /* GeoPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA56282CD10D7C0010E035 /* GeoPlannerApp.swift */; };
 		E5CA562B2CD10D7C0010E035 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA562A2CD10D7C0010E035 /* ContentView.swift */; };
 		E5CA562D2CD10D7E0010E035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CA562C2CD10D7E0010E035 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		E5C1C4AB2CDE313400EFF5A3 /* WindTurbine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindTurbine.swift; sourceTree = "<group>"; };
 		E5C1C4AD2CDE32B300EFF5A3 /* WindTurbinesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindTurbinesProvider.swift; sourceTree = "<group>"; };
+		E5C1C4AF2CE247EC00EFF5A3 /* GpxCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpxCreator.swift; sourceTree = "<group>"; };
 		E5CA56252CD10D7C0010E035 /* GeoPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CA56282CD10D7C0010E035 /* GeoPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPlannerApp.swift; sourceTree = "<group>"; };
 		E5CA562A2CD10D7C0010E035 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				E5CA562E2CD10D7E0010E035 /* Preview Content */,
 				E5E2B4352CD7D453004609E7 /* FirestoreWrapper.swift */,
 				E5C1C4AD2CDE32B300EFF5A3 /* WindTurbinesProvider.swift */,
+				E5C1C4AF2CE247EC00EFF5A3 /* GpxCreator.swift */,
 			);
 			path = GeoPlanner;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				E5CA562B2CD10D7C0010E035 /* ContentView.swift in Sources */,
 				E5C1C4AE2CDE32B300EFF5A3 /* WindTurbinesProvider.swift in Sources */,
+				E5C1C4B02CE247EC00EFF5A3 /* GpxCreator.swift in Sources */,
 				E5C1C4AC2CDE313400EFF5A3 /* WindTurbine.swift in Sources */,
 				E5E2B43B2CD7E989004609E7 /* Point.swift in Sources */,
 				E5CA56292CD10D7C0010E035 /* GeoPlannerApp.swift in Sources */,

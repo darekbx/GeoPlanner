@@ -77,8 +77,8 @@ struct ContentView: View {
         }
     }
     
-    fileprivate func UserLineToolbar() -> HStack<TupleView<(Text, Button<Text>, Button<Text>)>> {
-        return HStack {
+    fileprivate func UserLineToolbar() -> some View {
+        HStack {
             Text(String(format: "%.2fkm", userDistance / 1000))
             Button(
                 action: {
@@ -96,6 +96,14 @@ struct ContentView: View {
                 },
                 label: {
                     Text("Delete all")
+                }
+            )
+            Button(
+                action: {
+                    GpxCreator().exportToGpx(points: userLine)
+                },
+                label: {
+                    Text("Export to GPX")
                 }
             )
         }
@@ -136,6 +144,10 @@ struct UserLineView: MapContent {
     var body: some MapContent {
         MapPolyline(coordinates: userLine)
             .stroke(.green, lineWidth: 2)
+        ForEach(userLine, id: \.self) { point in
+            MapCircle(center: point, radius: 10)
+                .foregroundStyle(.white)
+        }
     }
 }
 
@@ -145,9 +157,24 @@ struct WindTurbinesView: MapContent {
     
     var body: some MapContent {
         ForEach(windTurbinesProvider.turbines, id: \.self) { turbine in
-            Marker(turbine.description(), systemImage: "fanblades", coordinate: CLLocationCoordinate2D(latitude: turbine.lat!, longitude: turbine.lon!))
-                .tint(.gray.opacity(0))
+        
+            MapCircle(center: CLLocationCoordinate2D(latitude: turbine.lat!, longitude: turbine.lon!), radius: 200)
+                .foregroundStyle(.yellow)
+        
+            //Marker(turbine.description(), systemImage: "fanblades", coordinate: CLLocationCoordinate2D(latitude: turbine.lat!, longitude: turbine.lon!))
+            //    .tint(.gray.opacity(0))
         }
+    }
+}
+
+extension CLLocationCoordinate2D: Hashable {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(latitude)
+        hasher.combine(longitude)
     }
 }
 
